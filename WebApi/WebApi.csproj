@@ -1,14 +1,49 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\CustomerOperations\Commands\CreateCustomer\" />
+    <Folder Include="Application\CustomerOperations\Commands\DeleteCustomer\" />
+    <Folder Include="Application\CustomerOperations\Commands\UpdateCustomer\" />
+    <Folder Include="Application\CustomerOperations\Queries\GetCustomerDetail\" />
+    <Folder Include="Application\CustomerOperations\Queries\GetCustomers\" />
+    <Folder Include="Application\DirectorOperations\Commands\CreateDirector\" />
+    <Folder Include="Application\DirectorOperations\Commands\DeleteDirector\" />
+    <Folder Include="Application\DirectorOperations\Commands\UpdateDirector\" />
+    <Folder Include="Application\DirectorOperations\Queries\GetDirectors\" />
+    <Folder Include="Application\DirectorOperations\Queries\GetDirectorDetail\" />
+    <Folder Include="Application\MovieOperations\Commands\CreateMovie\" />
+    <Folder Include="Application\MovieOperations\Commands\DeleteMovie\" />
+    <Folder Include="Application\MovieOperations\Commands\UpdateMovie\" />
+    <Folder Include="Application\MovieOperations\Queries\GetMovies\" />
+    <Folder Include="Application\MovieOperations\Queries\GetMovieDetail\" />
+    <Folder Include="Application\OrderOperations\Commands\CreateOrder\" />
+    <Folder Include="Application\OrderOperations\Commands\DeleteOrder\" />
+    <Folder Include="Application\OrderOperations\Commands\UpdateOrder\" />
+    <Folder Include="Application\OrderOperations\Queries\GetOrders\" />
+    <Folder Include="Application\OrderOperations\Queries\GetOrderDetail\" />
   </ItemGroup>
 
 </Project>
