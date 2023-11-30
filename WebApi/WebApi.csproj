@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\CustomerOperations\Commands\CreateCustomer\" />
-    <Folder Include="Application\CustomerOperations\Commands\DeleteCustomer\" />
-    <Folder Include="Application\CustomerOperations\Commands\UpdateCustomer\" />
-    <Folder Include="Application\CustomerOperations\Queries\GetCustomerDetail\" />
-    <Folder Include="Application\CustomerOperations\Queries\GetCustomers\" />
     <Folder Include="Application\DirectorOperations\Commands\CreateDirector\" />
     <Folder Include="Application\DirectorOperations\Commands\DeleteDirector\" />
     <Folder Include="Application\DirectorOperations\Commands\UpdateDirector\" />
