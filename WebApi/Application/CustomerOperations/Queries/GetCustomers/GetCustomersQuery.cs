@@ -16,7 +16,7 @@ namespace WebApi.Application.CustomerOperations.Queries.GetCustomers
         }
         public List<CustomersViewModel> Handle()
         {
-            var customerList = _context.Customers.Include(x => x.PurchasedMovies).Include(x => x.FavoriteGenres).OrderBy(x => x.Id).ToList<Customer>();
+            var customerList = _context.Customers.Include(x => x.Orders).Include(x => x.FavoriteGenres).OrderBy(x => x.Id).ToList<Customer>();
             List<CustomersViewModel> vm = _mapper.Map<List<CustomersViewModel>>(customerList);
 
             return vm;
@@ -27,7 +27,5 @@ namespace WebApi.Application.CustomerOperations.Queries.GetCustomers
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public ICollection<Order> PurchasedMovies { get; set; }
-        public ICollection<Genre> FavoriteGenres { get; set; }
     }
 }

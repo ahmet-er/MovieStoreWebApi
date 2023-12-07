@@ -28,7 +28,6 @@ namespace WebApi.Application.ActorOperations.Queries.GetActorDetail
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public ICollection<MovieActor> MovieActors { get; set; }
         public string FullName => $"{FirstName} {LastName}";
     }
 }

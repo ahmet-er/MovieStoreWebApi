@@ -17,11 +17,11 @@ namespace WebApi.Application.CustomerOperations.Commands.CreateCustomer
         public void Handle()
         {
             var customer = _context.Customers.SingleOrDefault(x => x.Email == Model.Email);
-            if (customer is null)
+            if (customer is not null)
                 throw new InvalidOperationException("This customer have already exist.");
             customer = _mapper.Map<Customer>(Model);
 
-            _context.Customers.Remove(customer);
+            _context.Customers.Add(customer);
             _context.SaveChanges();
         }
     }

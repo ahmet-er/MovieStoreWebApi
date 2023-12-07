@@ -40,7 +40,7 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actors");
+                    b.ToTable("Actors", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Customer", b =>
@@ -75,7 +75,7 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Director", b =>
@@ -96,7 +96,7 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Directors");
+                    b.ToTable("Directors", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Genre", b =>
@@ -118,7 +118,7 @@ namespace WebApi.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Genres");
+                    b.ToTable("Genres", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Log", b =>
@@ -138,7 +138,7 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logs");
+                    b.ToTable("Logs", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Movie", b =>
@@ -155,6 +155,10 @@ namespace WebApi.Migrations
                     b.Property<int>("GenreId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
@@ -167,7 +171,7 @@ namespace WebApi.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Movies", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.MovieActor", b =>
@@ -182,7 +186,7 @@ namespace WebApi.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("MovieActors");
+                    b.ToTable("MovieActors", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Order", b =>
@@ -195,6 +199,9 @@ namespace WebApi.Migrations
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
@@ -211,7 +218,7 @@ namespace WebApi.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("WebApi.Entities.Genre", b =>

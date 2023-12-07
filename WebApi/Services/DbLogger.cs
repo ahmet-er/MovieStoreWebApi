@@ -3,10 +3,10 @@ using WebApi.Entities;
 
 namespace WebApi.Services
 {
-    public class DbLogger : ILoggerService
+    public class DbLogger
     {
-        private readonly IApplicationDbContext _context;
-        public DbLogger(IApplicationDbContext context)
+        private readonly ApplicationDbContext _context;
+        public DbLogger(ApplicationDbContext context)
         {
             _context = context;
         }

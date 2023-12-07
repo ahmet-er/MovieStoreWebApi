@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
@@ -19,7 +20,7 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
 
         public void Handle()
         {
-            var actor = _context.Actors.SingleOrDefault(x => x.Id == ActorId);
+            var actor = _context.Actors.Include(x => x.MovieActors).SingleOrDefault(x => x.Id == ActorId);
             if (actor is null)
                 throw new InvalidOperationException("No actor to update was found.");
 
@@ -31,7 +32,6 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public ICollection<MovieActor> MovieActors { get; set; }
         public string FullName => $"{FirstName} {LastName}";
     }
 }

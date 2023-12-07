@@ -11,7 +11,7 @@ namespace WebApi.Entities
         public string Password { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpireDate { get; set; }
-        public ICollection<Order> PurchasedMovies { get; set; }
+        public ICollection<Order> Orders { get; set; }
         public ICollection<Genre> FavoriteGenres { get; set; }
         [NotMapped]
         public string FullName => $"{FirstName} {LastName}";

@@ -23,22 +23,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\DirectorOperations\Commands\CreateDirector\" />
-    <Folder Include="Application\DirectorOperations\Commands\DeleteDirector\" />
-    <Folder Include="Application\DirectorOperations\Commands\UpdateDirector\" />
-    <Folder Include="Application\DirectorOperations\Queries\GetDirectors\" />
-    <Folder Include="Application\DirectorOperations\Queries\GetDirectorDetail\" />
-    <Folder Include="Application\MovieOperations\Commands\CreateMovie\" />
-    <Folder Include="Application\MovieOperations\Commands\DeleteMovie\" />
-    <Folder Include="Application\MovieOperations\Commands\UpdateMovie\" />
-    <Folder Include="Application\MovieOperations\Queries\GetMovies\" />
-    <Folder Include="Application\MovieOperations\Queries\GetMovieDetail\" />
-    <Folder Include="Application\OrderOperations\Commands\CreateOrder\" />
-    <Folder Include="Application\OrderOperations\Commands\DeleteOrder\" />
-    <Folder Include="Application\OrderOperations\Commands\UpdateOrder\" />
-    <Folder Include="Application\OrderOperations\Queries\GetOrders\" />
-    <Folder Include="Application\OrderOperations\Queries\GetOrderDetail\" />
-  </ItemGroup>
-
 </Project>
