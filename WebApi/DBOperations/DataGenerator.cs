@@ -7,7 +7,7 @@ namespace WebApi.DBOperations
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var con = new ApplicationDbContext(serviceProvider.GetRequiredService <DbContextOptions<ApplicationDbContext>>()))
+            using (var con = new ApplicationDbContext(serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
                 if (con.Genres.Any())
                     return;

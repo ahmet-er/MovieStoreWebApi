@@ -11,7 +11,9 @@ namespace WebApi.UnitTests.TestSetup
         public IMapper Mapper { get; set; }
         public CommonTestFixture()
         {
-            var options = new DbContextOptionsBuilder<ApplicationDbContext>().UseSqlServer().Options;
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "MovieStoreDB")
+                .Options;
             Context = new ApplicationDbContext(options);
             Context.Database.EnsureCreated();
             Context.AddActors();
