@@ -44,7 +44,7 @@ namespace WebApi.UnitTests.Application.ActorOperations.Commands.CreateActor
         }
 
         [Fact]
-        public void WhenValidInputsAreFiven_Actor_ShouldBeCreated()
+        public void WhenValidInputsAreGiven_Actor_ShouldBeCreated()
         {
             // arrange
             CreateActorCommand command = new CreateActorCommand(dbContext, mapper);

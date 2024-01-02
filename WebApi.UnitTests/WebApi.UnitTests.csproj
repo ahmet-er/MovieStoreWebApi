@@ -26,18 +26,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\CustomerOperations\Commands\CreateCustomer\" />
     <Folder Include="Application\CustomerOperations\Commands\CreateToken\" />
     <Folder Include="Application\CustomerOperations\Commands\DeleteCustomer\" />
     <Folder Include="Application\CustomerOperations\Commands\UpdateCustomer\" />
     <Folder Include="Application\CustomerOperations\Commands\RefreshToken\" />
-    <Folder Include="Application\DirectorOperations\Commands\CreateDirector\" />
     <Folder Include="Application\DirectorOperations\Commands\DeleteDirector\" />
     <Folder Include="Application\DirectorOperations\Commands\UpdateDirector\" />
-    <Folder Include="Application\MovieOperations\Commands\CreateMovie\" />
     <Folder Include="Application\MovieOperations\Commands\DeleteMovie\" />
     <Folder Include="Application\MovieOperations\Commands\UpdateMovie\" />
-    <Folder Include="Application\OrderOperations\Commands\CreateOrder\" />
     <Folder Include="Application\OrderOperations\Commands\SoftDeleteOrder\" />
     <Folder Include="Application\OrderOperations\Commands\UpdateOrder\" />
   </ItemGroup>

@@ -23,7 +23,7 @@ namespace WebApi.UnitTests.Application.MovieOperations.Queries.GetMovieDetail
             // arrange
             var movie = new Movie
             {
-                Name = "test movie",
+                Name = "new test movie",
                 PublishDate = DateTime.Now.Date.AddYears(-30),
                 GenreId = 1,
                 DirectorId = 1,

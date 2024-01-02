@@ -23,8 +23,8 @@ namespace WebApi.UnitTests.Application.DirectorOperations.Queries.GetDirectorDet
             // arrange
             var director = new Director
             {
-                FirstName = "first name",
-                LastName = "last name"
+                FirstName = "new",
+                LastName = "director"
             };
             dbContext.Directors.Add(director);
             dbContext.SaveChanges();
