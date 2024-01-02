@@ -21,7 +21,9 @@ namespace WebApi.Application.OrderOperations.Commands.DeleteOrder
             var order = _context.Orders.SingleOrDefault(x => x.Id == OrderId);
 
             if (order is null || order.IsDeleted == true)
-                throw new InvalidOperationException("There is no order in db");
+                throw new InvalidOperationException("There is no order in db.");
+
+            order.IsDeleted = true;
 
             _mapper.Map(Model, order);
             _context.SaveChanges();

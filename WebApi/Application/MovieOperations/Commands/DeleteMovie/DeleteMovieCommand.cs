@@ -16,7 +16,10 @@ namespace WebApi.Application.MovieOperations.Commands.DeleteMovie
         {
             var movie = _context.Movies.SingleOrDefault(x => x.Id == MovieId);
             if (movie is null)
-                throw new InvalidOperationException("Cannot found the movie");
+                throw new InvalidOperationException("Cannot found the movie.");
+
+            if (movie.MovieActors is not null && movie.MovieActors.Any())
+                throw new InvalidOperationException("Cannot delete beacuse movie have actors.");
 
             _context.Movies.Remove(movie);
             _context.SaveChanges();

@@ -17,6 +17,9 @@ namespace WebApi.Application.CustomerOperations.Commands.DeleteCustomer
             if (customer is null)
                 throw new InvalidOperationException("No customer to delete was found.");
 
+            if (customer.Orders is not null && customer.Orders.Any())
+                throw new InvalidOperationException("You cannot delete this customer, because this customer have any order(s).");
+
             _context.Customers.Remove(customer);
             _context.SaveChanges();
         }

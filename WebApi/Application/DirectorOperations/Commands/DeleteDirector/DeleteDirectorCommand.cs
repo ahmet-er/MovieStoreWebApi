@@ -19,7 +19,7 @@ namespace WebApi.Application.DirectorOperations.Commands.DeleteDirector
             if (director is null)
                 throw new InvalidOperationException("Cannot found the director.");
 
-            if (director.Movies.Any())
+            if (director.Movies is not null && director.Movies.Any())
                 throw new InvalidOperationException("You can't delete this director beacuse this director has a movie.");
 
             _context.Directors.Remove(director);

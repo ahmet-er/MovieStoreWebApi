@@ -18,7 +18,7 @@ namespace WebApi.Application.ActorOperations.Commands.DeleteActor
             if (actor is null)
                 throw new InvalidOperationException("No actor to delete was found.");
 
-            if (actor.MovieActors != null && actor.MovieActors.Any())
+            if (actor.MovieActors is not null && actor.MovieActors.Any())
                 throw new InvalidOperationException("Cannot delete this actor because he/she have any movie.");
 
             _context.Actors.Remove(actor);
