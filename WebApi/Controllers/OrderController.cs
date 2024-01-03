@@ -73,7 +73,7 @@ namespace WebApi.Controllers
             return Ok("The order updated successfully.");
         }
 
-        [HttpPost("id")]
+        [HttpDelete("id")]
         public ActionResult SoftDeleteOrder(int id, [FromBody] SoftDeleteOrderModel softDeleteModel)
         {
             SoftDeleteOrderCommand command = new SoftDeleteOrderCommand(_context, _mapper);
