@@ -26,15 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\CustomerOperations\Commands\CreateToken\" />
-    <Folder Include="Application\CustomerOperations\Commands\UpdateCustomer\" />
-    <Folder Include="Application\CustomerOperations\Commands\RefreshToken\" />
-    <Folder Include="Application\DirectorOperations\Commands\UpdateDirector\" />
-    <Folder Include="Application\MovieOperations\Commands\UpdateMovie\" />
-    <Folder Include="Application\OrderOperations\Commands\UpdateOrder\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WebApi\WebApi.csproj" />
   </ItemGroup>
 

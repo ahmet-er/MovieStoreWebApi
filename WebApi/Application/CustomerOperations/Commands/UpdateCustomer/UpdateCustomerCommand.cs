@@ -18,7 +18,7 @@ namespace WebApi.Application.CustomerOperations.Commands.UpdateCustomer
         {
             var customer = _context.Customers.SingleOrDefault(x => x.Id == CustomerId);
             if (customer is null)
-                throw new InvalidOperationException("No cusstomer to update was found.");
+                throw new InvalidOperationException("No customer to update was found.");
 
             _mapper.Map(Model, customer);
             _context.SaveChanges();
